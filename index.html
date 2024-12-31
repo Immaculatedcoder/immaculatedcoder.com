@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EA.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/tailwind.config.js"></script>
+    <script src="https://kit.fontawesome.com/0579656838.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-70%]">
+        <img src="Images/header.png" class="w-full rounded-lg">
+    </div>
+     <!-- (w-full width), (fixed means the position is fixed no matter how we scrowl the screen)  -->
+     <!--  -->
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+         <!-- (w - css width), (cursor - is like you want to change the cursor), (mr-margin right)   -->
+        <img src="Images/logo_new.png" alt="logo" class="w-28 cursor-pointer mr-14">
+         <!-- (hidden md: means hide on medium screens) (lg: means change the gap to be 6px on large screens)-->
+         <!-- (flex from flexbasis) (items- center aligns the items on a straight line)   -->
+         <!-- (gap-6 is to set the gap between the items to 6) (rounded-full ) -->
+         <!-- major change (hidden md:flex )(none to flex), (gap-6 lg:gap-8)(gap from 6 to 8)  -->
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-lg bg-opacity-50">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact me </a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <!-- (text changes th font size) -->
+            <button class="w-6"><i class="fa-regular fa-moon text-xl"></i></i></button>
+            <a href="contact" class="hidden lg:flex items-center px-10 py-2.5 border border-gray-500 rounded-full">
+                Contact &#8599;
+            </a>
+            <button class="block md:hidden ml-3">
+                <i class="fa-solid fa-bars "></i>
+            </button>
+        </div>
+        <!-- --------------------- Mobile Menu--------------------------------------- -->
+         <ul id="sideMenu" class="flex md:hidden flex-col py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact me </a></li>
+         </ul>
+    </nav>
+</body>
+</html>
