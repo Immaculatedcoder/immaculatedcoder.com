@@ -8,7 +8,7 @@
     <script src="/tailwind.config.js"></script>
     <script src="https://kit.fontawesome.com/0579656838.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="overflow-x-hidden">
     <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-70%]">
         <img src="Images/header.png" class="w-full rounded-lg">
     </div>
@@ -34,18 +34,43 @@
             <a href="contact" class="hidden lg:flex items-center px-10 py-2.5 border border-gray-500 rounded-full">
                 Contact &#8599;
             </a>
-            <button class="block md:hidden ml-3">
+            <button class="block md:hidden ml-3" onclick="openMenu()">
                 <i class="fa-solid fa-bars "></i>
             </button>
         </div>
         <!-- --------------------- Mobile Menu--------------------------------------- -->
-         <ul id="sideMenu" class="flex md:hidden flex-col py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#project">Project</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#contact">Contact me </a></li>
+         <!-- We set -right-64(-265px) to initially set it off the screen -->
+         <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-100 transition duration-300">
+            <div class="absolute right-6 top-6" onclick="closeMenu()"><i class="fa-regular fa-circle-xmark text-2xl"></i></div>
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About me</a></li>
+            <li><a href="#project" onclick="closeMenu()">Project</a></li>
+            <li><a href="#features" onclick="closeMenu()">Features</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact me </a></li>
          </ul>
     </nav>
+    <!-- ------------------------------Home Page------------------------------------- -->
+     <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center">
+        <img src="/Images/img4.png" class="rounded-full w-3/5">
+        <h3 class="flex items-end text-xl md:text-2xl mb-3"> Hi! &#128075;, I'm Emmanuel Adebayo  </h3>
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl mb-3"> Applied Mathematician <br> Frontend Web Developer <br> Computer Vision Engineer </h1>
+        <p class="max-2-2xl mx-auto mb-4"> I leverage on the power of numerical analysis, cutting-edge web technologies, 
+            and machine learning to develop projects that stand at the intersection of theory and practice.
+        </p>
+        <div class="flex flex-row items-center gap-5">
+            <a href="contact" class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] hover:bg-gradient-to-l from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2">
+                Contact me <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="/Images/Emmanuel_CV_New.pdf" download class="px-10 py-3 border rounded-full border-gray-500 bg-none hover:bg-gradient-to-r from-[#b820e6] to-[#da7d20] transition duration-500 hover:text-white">Download CV <i class="fa-solid fa-download"></i></a>
+        </div>
+     </div>
+    <!-- ----------------------------About me--------------------------------------------- -->
+    <div id="#about" class="w-full px-[1%] py-10">
+        <h4 class="text-center mb-2 text-lg"> Introduction</h4>
+        <h2 class="text-center text-5xl"> About me</h2>
+    </div>
+
+    <!-- Linking JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
